@@ -1,8 +1,8 @@
 <?php namespace Newway\FlashMessages;
 
-use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\ServiceProvider as SP;
 
-class FlashMessagesServiceProvider extends ServiceProvider
+class ServiceProvider extends SP
 {
     public function register()
     {
