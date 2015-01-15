@@ -1,4 +1,4 @@
-<?php namespace App\Libraries\FlashMessages;
+<?php namespace Newway\FlashMessages;
 
 use Illuminate\Support\MessageBag;
 use Illuminate\Session\SessionManager;

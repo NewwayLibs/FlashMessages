@@ -1,4 +1,4 @@
-<?php namespace App\Libraries\FlashMessages\Facades;
+<?php namespace Newway\FlashMessages\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
