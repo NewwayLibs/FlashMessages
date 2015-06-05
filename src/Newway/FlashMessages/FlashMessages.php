@@ -11,7 +11,7 @@ class FlashMessages extends MessageBag
 
     public function __construct(SessionManager $session, $messages = array())
     {
-	    $this->session = $session;
+        $this->session = $session;
 
         if ($session->has($this->session_key))
         {
@@ -31,18 +31,23 @@ class FlashMessages extends MessageBag
         return $this;
     }
 
-	public function count($key = NULL)
+    public function count($key = NULL)
     {
-		if (array_key_exists($key, $this->messages))
+        if (array_key_exists($key, $this->messages))
         {
             return count($this->messages[$key]);
         }
 
-		return count($this->messages);
-	}
+        return count($this->messages);
+    }
 
     public function add($key, $message) {
         return parent::add($key, $message)->flash();
+    }
+
+    public function clear() {
+        $this->messages = [];
+        return $this->flash();
     }
 
     public function getMessageBag()
